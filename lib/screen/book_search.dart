@@ -9,7 +9,7 @@ class BookSearch extends StatelessWidget {
   final Future<Map<String, dynamic>>? futureSearchResult;
   // final String rating;
 
-  Future<double?> git(String key) async {
+  Future<double?> fetchBookRating(String key) async {
     final url = 'https://openlibrary.org$key/ratings.json';
 
     try {
@@ -59,9 +59,12 @@ class BookSearch extends StatelessWidget {
             final coverUrl =
                 coverId != null
                     ? 'https://covers.openlibrary.org/b/id/$coverId-M.jpg'
-                    : 'https://via.placeholder.com/150';
+                    : 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg';
 
-            final String key = searchResults['key'];
+            final String key = book['key'];
+            print("title : $title");
+            print("coverUrl : $coverUrl");
+            print("authorName : $authorName");
             return FutureBuilder(
               future: fetchBookRating(key),
               builder: (context, snapshot) {

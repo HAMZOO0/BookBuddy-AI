@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert'; // for json convertion
 import '../widget/book_card.dart';
 import 'book_detail_page.dart';
-import '../widget/book_search.dart';
+import '../screen/book_search.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -384,7 +384,7 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               )
-              : BookSearch(futureSearchResult: futureSearchResult ),
+              : BookSearch(futureSearchResult: futureSearchResult),
     );
   }
 }
