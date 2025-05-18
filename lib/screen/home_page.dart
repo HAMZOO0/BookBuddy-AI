@@ -353,7 +353,7 @@ class _HomePageState extends State<HomePage> {
 
                                 return GestureDetector(
                                   onTap: () {
-                                    print("===========> clink howa");
+                                    // print("===========> clink howa");
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(

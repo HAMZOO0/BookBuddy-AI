@@ -22,12 +22,33 @@ class _ChatInterfaceState extends State<ChatInterface> {
   void initState() {
     super.initState();
     prompt = """
-  Strictly provide a chapter-wise summary of the book "${widget.bookName}". 
-  Format: 
-  1. Chapter 1: [Summary] 
-  2. Chapter 2: [Summary] 
-  ... 
-  No greetings, conclusions, or extra text. Only chapter summaries.
+Strictly provide a chapter-wise summary of the book "${widget.bookName}".
+
+Strictly provide a chapter-wise summary of the book titled: "${widget.bookName}".
+
+Format:
+Brief Introduction (Add one blank line after the heading)
+
+1. What is the book about?
+[Brief introduction here]
+
+Overall Summary (Add one blank line after the heading)
+
+2. Whole Book Summary:
+[Complete book summary here]
+
+Chapter-wise Summary (Add one blank line after the heading)
+
+3. Chapter-wise Summary:
+For each chapter, follow this format:
+
+Chapter [Number]: [Chapter Title]  
+[Summary here]
+
+Important Rules:
+- Do NOT add greetings, conclusions, or commentary.
+- Only return summaries in the exact format above.
+
 """;
   }
 

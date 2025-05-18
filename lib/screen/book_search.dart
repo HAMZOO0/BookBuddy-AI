@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widget/book_card.dart';
 import 'dart:convert'; // for json convertion
 import 'package:http/http.dart' as http;
+import '../screen/book_detail_page.dart';
 
 class BookSearch extends StatelessWidget {
   const BookSearch({super.key, required this.futureSearchResult});
@@ -70,13 +71,30 @@ class BookSearch extends StatelessWidget {
               builder: (context, snapshot) {
                 final String rating =
                     snapshot.hasData ? snapshot.data!.toStringAsFixed(1) : '0';
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: BookCard(
-                    url: coverUrl,
-                    autherName: authorName,
-                    bookName: title,
-                    bookRating: rating,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return BookDetailPage(
+                            autherName: authorName,
+                            url: coverUrl,
+                            bookRating: rating,
+                            bookName: title,
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: BookCard(
+                      url: coverUrl,
+                      autherName: authorName,
+                      bookName: title,
+                      bookRating: rating,
+                    ),
                   ),
                 );
               },
