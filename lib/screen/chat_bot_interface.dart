@@ -12,8 +12,8 @@ class ChatInterface extends StatefulWidget {
 }
 
 class _ChatInterfaceState extends State<ChatInterface> {
-  ChatUser mySelf = ChatUser(id: '0', firstName: 'Hamza');
-  ChatUser geminiUser = ChatUser(id: '1', firstName: 'Gemini');
+  ChatUser mySelf = ChatUser(id: '0', firstName: 'User');
+  ChatUser geminiUser = ChatUser(id: '1', firstName: 'BookBuddy');
   List<ChatMessage> messages = [];
   List<ChatUser> typing = [];
   final Uri url = Uri.parse(
@@ -28,7 +28,6 @@ class _ChatInterfaceState extends State<ChatInterface> {
   }
 
   Future<void> getdata(ChatMessage text) async {
-    // custom delay function
     setState(() {
       typing.add(geminiUser);
       messages.insert(0, text);
@@ -44,13 +43,10 @@ class _ChatInterfaceState extends State<ChatInterface> {
       ],
     };
 
-    // await Future.delayed(const Duration(seconds: 2));
     await http.post(url, headers: headers, body: jsonEncode(dataToGemini)).then((
       response,
     ) {
       if (response.statusCode == 200) {
-        // Handle the response from the server
-        // print("Response: ${response.body}");
         final ResponseFromGemini = jsonDecode(response.body);
         print(
           ResponseFromGemini['candidates'][0]['content']['parts'][0]['text'],
@@ -67,8 +63,7 @@ class _ChatInterfaceState extends State<ChatInterface> {
           messages = messages;
         });
       } else {
-        // Handle error
-        print("Error: ${response.statusCode}");
+        // print("Error: ${response.statusCode}");
       }
     });
   }
@@ -97,11 +92,15 @@ class _ChatInterfaceState extends State<ChatInterface> {
   }
 
   Widget hamzaAvatar(ChatUser user, Function? onTap, Function? onLongPress) {
-    return Center(
-      child: CircleAvatar(
-        backgroundColor: Colors.black,
-        child: Text("H", style: const TextStyle(color: Colors.white)),
-      ),
-    );
+      return Center(
+        child: CircleAvatar(
+          backgroundColor: Colors.transparent,
+          backgroundImage: NetworkImage(
+            'https://thumbs.dreamstime.com/b/black-white-line-icon-chatbot-reading-book-isolated-transparent-background-innovation-science-concept-machine-learning-338164561.jpg',
+          ),
+          radius: 20,
+        ),
+      );
+    
   }
 }

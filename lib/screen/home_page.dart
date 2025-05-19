@@ -6,6 +6,8 @@ import 'dart:convert'; // for json convertion
 import '../widget/book_card.dart';
 import 'book_detail_page.dart';
 import '../screen/book_search.dart';
+import '../screen/favorite_page.dart';
+import '../screen/chat_bot_interface.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,6 +20,8 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController textEditingController = TextEditingController();
   Future<Map<String, dynamic>>? futureSearchResult;
   String searchQuery = "";
+  int currentPage = 0; // use for buttom_navigation_bar
+  List<Widget> pages = const [FavoritePage(), ChatInterface()];
 
   final List<String> bookFilter = const [
     'All',
@@ -174,7 +178,11 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body:
-          searchQuery.isEmpty
+          currentPage == 1
+              ? FavoritePage()
+              : currentPage == 2
+              ? ChatInterface()
+              : searchQuery.isEmpty
               ? FutureBuilder(
                 future: Future.wait([
                   fetchBookData(),
@@ -385,6 +393,22 @@ class _HomePageState extends State<HomePage> {
                 },
               )
               : BookSearch(futureSearchResult: futureSearchResult),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
+          setState(() {
+            currentPage = value;
+          });
+        },
+        currentIndex: currentPage,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'favorite',
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'chatbot'),
+        ],
+      ),
     );
   }
 }

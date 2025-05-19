@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.chatbot"
+    namespace = "com.example.bookbuddy"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"  // Correctly added inside android block
 
