@@ -37,7 +37,8 @@ dependencies:
   dash_chat_2: ^0.0.21
   flutter_dotenv: ^5.0.2
   flutter_markdown: ^0.7.1
-
+  provider: ^6.1.5
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

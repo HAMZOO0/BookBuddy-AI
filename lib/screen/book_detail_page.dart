@@ -1,4 +1,6 @@
+import 'package:bookbuddy/provider/favorite_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../widget/chat_bot.dart';
 
 class BookDetailPage extends StatelessWidget {
@@ -17,6 +19,8 @@ class BookDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // print(Provider.of<FavoriteProvider>(context).favoriteList);
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -86,7 +90,22 @@ class BookDetailPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    final Map<String, dynamic> book = {
+                      'url': url,
+                      'bookName': bookName,
+                      'autherName': autherName,
+                    };
+                    Provider.of<FavoriteProvider>(
+                      context,
+                      listen: false,
+                    ).addBook(book);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Book Added Succeessfully!"),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(231, 248, 183, 43),
                     minimumSize: const Size(double.infinity, 50),

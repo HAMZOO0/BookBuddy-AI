@@ -400,13 +400,14 @@ class _HomePageState extends State<HomePage> {
           });
         },
         currentIndex: currentPage,
+        selectedFontSize: 16,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'favorite',
+            label: 'Favorite',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'chatbot'),
+          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chatbot'),
         ],
       ),
     );
