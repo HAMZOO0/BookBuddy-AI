@@ -10,6 +10,7 @@
   <img src="./screenshot/Screenshot_20250522-111707.jpg" alt="BookBuddy Search" width="250"/>
   <img src="./screenshot/Screenshot_20250522-111729.jpg" alt="BookBuddy Details" width="271"/>
   <img src="./screenshot/scrrenshot.jpeg" alt="BookBuddy Details" width="250"/>
+  <img src="./screenshot/Screenshot_20250522-111821.jpg" alt="BookBuddy Details" width="245"/>
 
 
 </p>
