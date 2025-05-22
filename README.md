@@ -26,20 +26,26 @@
 - 💬 **Chat Interface** for deep interaction with content
 - 🌙 **Dark Mode Ready** *(adapts to system settings)*
 
----
-
 ## 📁 Folder Structure
 
 ```plaintext
 lib/
  ├── main.dart
+ ├── provider/
+ │    └── favorite_provider.dart
  ├── screen/
+ │    ├── book_detail.dart
+ │    ├── book_search.dart
+ │    ├── chat_bot_interface.dart
+ │    ├── favorite_page.dart
  │    └── home_page.dart
- └── provider/
-      └── favorite_provider.dart
+ └── widget/
+   ├── book_card.dart
+   ├── chat_bot.dart
+   └── vertical_book_card.dart
 assets/
- ├── images/
- └── .env
+ ├── fonts/../
+
 ```
 
 ---
