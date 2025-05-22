@@ -6,10 +6,10 @@
 </p>
 
 <p align="center">
-  <img src="Screenshot_20250522-111649.jpg" alt="BookBuddy Home" width="250"/>
-  <img src="Screenshot_20250522-111707.jpg" alt="BookBuddy Search" width="250"/>
-  <img src="Screenshot_20250522-111729.jpg" alt="BookBuddy Details" width="250"/>
-  <img src="scrrenshot.jpeg" alt="BookBuddy Details" width="250"/>
+  <img src="./screenshot/Screenshot_20250522-111649.jpg" alt="BookBuddy Home" width="250"/>
+  <img src="./screenshot/Screenshot_20250522-111707.jpg" alt="BookBuddy Search" width="250"/>
+  <img src="./screenshot/Screenshot_20250522-111729.jpg" alt="BookBuddy Details" width="250"/>
+  <img src="./screenshot/scrrenshot.jpeg" alt="BookBuddy Details" width="250"/>
 
 
 </p>
@@ -47,7 +47,7 @@ assets/
 
 | Home | Favorite Page | Book Details | Removing Favorite | AI Chat Bot | Search Result |
 |:----:|:--------------:|:------------:|:---------:|:--------------:|:--------------:|
-| ![Home](Screenshot_20250522-111649.jpg) | ![Search](Screenshot_20250522-111707.jpg) | ![Details](Screenshot_20250522-111729.jpg) | ![Dark](Screenshot_20250522-111736.jpg) | ![Error](Screenshot_20250522-111821.jpg) | ![ Search Result](scrrenshot.jpeg) |
+| ![Home](./screenshot/Screenshot_20250522-111649.jpg) | ![Search](./screenshot/Screenshot_20250522-111707.jpg) | ![Details](./screenshot/Screenshot_20250522-111729.jpg) | ![Dark](./screenshot/Screenshot_20250522-111736.jpg) | ![Error](./screenshot/Screenshot_20250522-111821.jpg) | ![ Search Result](./screenshot/scrrenshot.jpeg) |
 
 ---
 
