@@ -17,6 +17,14 @@
 
 ---
 
+## 🌟 Project Overview
+
+**BookBuddy AI** is your personal book companion, powered by Flutter and AI. Instantly search millions of books, chat with AI about any book, get chapter-wise summaries, and manage your favorites—all in a beautiful, modern interface.
+
+
+
+---
+
 ## 🚀 Features
 
 - 🔍 **Search Books** by title, author, or keywords
@@ -26,29 +34,40 @@
 - 💬 **Chat Interface** for deep interaction with content
 - 🌙 **Dark Mode Ready** *(adapts to system settings)*
 
-## 📁 Folder Structure
+---
 
-```plaintext
+
+## 🏗️ Code Structure & Design Pattern
+
+The project follows a **Provider-based MVVM (Model-View-ViewModel)** architecture for clean separation of concerns and scalability:
+
+```
 lib/
- ├── main.dart
- ├── provider/
+ ├── main.dart                # App entry point, theme, and provider setup
+ ├── provider/                # ViewModels (state management)
  │    └── favorite_provider.dart
- ├── screen/
+ ├── screen/                  # Views (UI screens)
  │    ├── book_detail.dart
  │    ├── book_search.dart
  │    ├── chat_bot_interface.dart
  │    ├── favorite_page.dart
  │    └── home_page.dart
- └── widget/
-   ├── book_card.dart
-   ├── chat_bot.dart
-   └── vertical_book_card.dart
+ └── widget/                  # Reusable UI components
+      ├── book_card.dart
+      ├── chat_bot.dart
+      └── vertical_book_card.dart
 assets/
- ├── fonts/../
-
+ ├── fonts/
+ └── screenshot/
 ```
 
+- **Provider** is used for state management (ViewModel).
+- **Screens** represent the UI (View).
+- **Widgets** are reusable UI components.
+- **Models** (if any) would represent data structures.
+
 ---
+
 
 ## 🖼️ Screenshots
 
@@ -57,6 +76,9 @@ assets/
 | ![Home](./screenshot/Screenshot_20250522-111649.jpg) | ![Search](./screenshot/Screenshot_20250522-111707.jpg) | ![Details](./screenshot/Screenshot_20250522-111729.jpg) | ![Dark](./screenshot/Screenshot_20250522-111736.jpg) | ![Error](./screenshot/Screenshot_20250522-111821.jpg) | ![ Search Result](./screenshot/scrrenshot.jpeg) |
 
 ---
+
+## 📽️ Demo 
+<video controls src="./video/screen-20250522-112031.mp4" title="Title" width="320"></video>
 
 ## 🛠️ Getting Started
 
@@ -83,14 +105,4 @@ assets/
    ```
 
 ---
-
-## 🌐 Tech Stack
-
-| Tech         | Description                        |
-|--------------|------------------------------------|
-| Flutter      | Cross-platform UI toolkit          |
-| Dart         | Primary language for Flutter       |
-| REST APIs    | For book data and summaries        |
-| Provider     | State management                   |
-| OpenAI/LLMs  | For AI-powered chat & summaries    |
 
