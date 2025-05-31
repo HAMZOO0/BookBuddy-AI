@@ -78,7 +78,7 @@ assets/
 ---
 
 ## 📽️ Demo 
-<video controls src="./video/screen-20250522-112031.mp4" title="Title" width="320"></video>
+<video controls src="./video/screen-20250522-112031 (1) (1).mp4" title="Title" width="320"></video>
 
 ## 🛠️ Getting Started
 
