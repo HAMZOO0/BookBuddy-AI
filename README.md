@@ -78,7 +78,8 @@ assets/
 ---
 
 ## 📽️ Demo 
-<video controls src="./video/screen-20250522-112031 (1) (1).mp4" title="Title" width="320"></video>
+[![Watch the video](./assets/thumbnail.png)](https://drive.google.com/file/d/1yrnFiRdq7Sz6GX2xSaJXmMeRYHQSHfVi/view?usp=sharing)
+
 
 ## 🛠️ Getting Started
 
