@@ -77,8 +77,17 @@ assets/
 
 ---
 
+- **Figma Design:**  
+   [BookBuddy AI Figma Project](https://www.figma.com/design/5XmyFUVALukhtw25qMSdQ5/Book-Buddy-Ai---App?t=Y52IKU65qTJMwmaC-0)
+
+- **Mockup Preview:**  
+   ![BookBuddy AI Mockup](./design%20(5).png)
+
+---
+
 ## 📽️ Demo 
-[![Watch the video](./assets/thumbnail.png)](https://drive.google.com/file/d/1yrnFiRdq7Sz6GX2xSaJXmMeRYHQSHfVi/view?usp=sharing)
+[![Watch the video](./assets/thumbnail.png)](https://youtube.com/shorts/8pN8V52YLm4)
+
 
 
 ## 🛠️ Getting Started
@@ -106,4 +115,5 @@ assets/
    ```
 
 ---
+
 
