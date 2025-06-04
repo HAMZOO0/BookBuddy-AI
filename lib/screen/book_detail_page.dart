@@ -136,7 +136,7 @@ class BookDetailPage extends StatelessWidget {
                 // Ensure ChatInterface expands to fit its content and doesn't overflow
                 constraints: BoxConstraints(
                   minHeight: 100,
-                  maxHeight: 300, // adjust as needed
+                  // maxHeight: 300, // adjust as needed
                   minWidth: double.infinity,
                 ),
                 child: ChatInterface(bookName: bookName),
